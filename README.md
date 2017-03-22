@@ -6,7 +6,7 @@ http://www.json-generator.com/
 jQuery Plugin for generating table elements using JSON data
 https://github.com/shabeer-ali-m/jPut 
 
-'''
+```
     {
   name: '{{firstName()}} {{surname()}}', 
   technicianName: '{{firstName()}} {{surname()}}', 
@@ -22,4 +22,4 @@ https://github.com/shabeer-ali-m/jPut
         orderStatusThree:['Done']
      }
 
-'''
+```
