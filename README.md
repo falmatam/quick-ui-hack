@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CREDITS:
 
 Free dummy-data JSON generator
@@ -24,3 +25,6 @@ https://github.com/shabeer-ali-m/jPut
 
 
 
+=======
+# quick-ui-hack
+>>>>>>> 467d7c9f6bb25d9e7f1770d3c6cf9eaf6b473a3c
