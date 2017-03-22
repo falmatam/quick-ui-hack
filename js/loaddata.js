@@ -1,0 +1,354 @@
+$(document).ready(function(){
+
+			var json = [
+		  {
+		    "name": "Fields Sargent",
+		    "technicianName": "Bentley Eaton",
+		    "orderDate": "2015-11-04",
+		    "apptType": "QUOTE",
+		    "cellPhone": "(970) 479-3994",
+		    "email": "bentleyeaton@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Ferguson Velasquez",
+		    "technicianName": "Bryan Ellis",
+		    "orderDate": "2014-07-10",
+		    "apptType": "INSURANCE",
+		    "cellPhone": "(941) 564-2097",
+		    "email": "bryanellis@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Head Wilcox",
+		    "technicianName": "Simone Byrd",
+		    "orderDate": "2016-12-21",
+		    "apptType": "WARRANTY",
+		    "cellPhone": "(923) 440-2309",
+		    "email": "simonebyrd@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Mckinney Wheeler",
+		    "technicianName": "Brady Harris",
+		    "orderDate": "2015-09-04",
+		    "apptType": "INSURANCE",
+		    "cellPhone": "(837) 568-3654",
+		    "email": "bradyharris@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Mccormick Wilkinson",
+		    "technicianName": "Wendy Slater",
+		    "orderDate": "2016-06-10",
+		    "apptType": "WARRANTY",
+		    "cellPhone": "(842) 515-2213",
+		    "email": "wendyslater@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "May Hoffman",
+		    "technicianName": "Noreen Levy",
+		    "orderDate": "2014-08-08",
+		    "apptType": "INSURANCE",
+		    "cellPhone": "(901) 533-2687",
+		    "email": "noreenlevy@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Morgan Robbins",
+		    "technicianName": "Kennedy Bush",
+		    "orderDate": "2016-10-17",
+		    "apptType": "WARRANTY",
+		    "cellPhone": "(883) 417-2053",
+		    "email": "kennedybush@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Kendra Peterson",
+		    "technicianName": "Tamera Bentley",
+		    "orderDate": "2015-08-22",
+		    "apptType": "REPAIR",
+		    "cellPhone": "(886) 547-2069",
+		    "email": "tamerabentley@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Daisy Vincent",
+		    "technicianName": "Kim Sawyer",
+		    "orderDate": "2017-01-12",
+		    "apptType": "INSURANCE",
+		    "cellPhone": "(862) 512-3791",
+		    "email": "kimsawyer@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Walker Suarez",
+		    "technicianName": "Levy Calderon",
+		    "orderDate": "2016-08-29",
+		    "apptType": "QUOTE",
+		    "cellPhone": "(888) 578-3059",
+		    "email": "levycalderon@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Flowers Mccall",
+		    "technicianName": "Shana Bryant",
+		    "orderDate": "2014-01-10",
+		    "apptType": "QUOTE",
+		    "cellPhone": "(979) 429-3974",
+		    "email": "shanabryant@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Skinner Molina",
+		    "technicianName": "Greer Fisher",
+		    "orderDate": "2015-11-03",
+		    "apptType": "REPAIR",
+		    "cellPhone": "(827) 434-2048",
+		    "email": "greerfisher@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Spence Rosa",
+		    "technicianName": "Haynes Lowe",
+		    "orderDate": "2016-11-05",
+		    "apptType": "QUOTE",
+		    "cellPhone": "(935) 422-2106",
+		    "email": "hayneslowe@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Sasha Vance",
+		    "technicianName": "Rojas Jones",
+		    "orderDate": "2016-01-16",
+		    "apptType": "WARRANTY",
+		    "cellPhone": "(846) 417-3810",
+		    "email": "rojasjones@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Beverly Buckley",
+		    "technicianName": "Sally Schmidt",
+		    "orderDate": "2016-06-09",
+		    "apptType": "INSURANCE",
+		    "cellPhone": "(940) 548-3656",
+		    "email": "sallyschmidt@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Miles Burt",
+		    "technicianName": "Oneil Key",
+		    "orderDate": "2017-02-10",
+		    "apptType": "QUOTE",
+		    "cellPhone": "(877) 550-2930",
+		    "email": "oneilkey@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Pruitt Holland",
+		    "technicianName": "Petra Kent",
+		    "orderDate": "2014-01-24",
+		    "apptType": "QUOTE",
+		    "cellPhone": "(833) 558-2815",
+		    "email": "petrakent@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Morales Beard",
+		    "technicianName": "Joan Duke",
+		    "orderDate": "2014-03-30",
+		    "apptType": "QUOTE",
+		    "cellPhone": "(859) 422-3726",
+		    "email": "joanduke@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Judy Aguirre",
+		    "technicianName": "Jerry Sheppard",
+		    "orderDate": "2014-01-31",
+		    "apptType": "INSURANCE",
+		    "cellPhone": "(954) 597-2874",
+		    "email": "jerrysheppard@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  },
+		  {
+		    "name": "Mcdowell Walter",
+		    "technicianName": "Stacie Randolph",
+		    "orderDate": "2015-03-28",
+		    "apptType": "INSURANCE",
+		    "cellPhone": "(919) 518-3424",
+		    "email": "stacierandolph@rotodyne.com",
+		    "orderStatusOne": [
+		      "In Progress"
+		    ],
+		    "orderStatusTwo": [
+		      "Cancelled"
+		    ],
+		    "orderStatusThree": [
+		      "Done"
+		    ]
+		  }
+		];
+		//while running this code the template will be appended in your div with json data
+		$("#tbody").jPut({
+		    jsonData:json,
+		    //ajax_url:"youfile.json",  if you want to call from a json file
+		    name:"tbody_template",
+			});
+
+		
+
+		})(jQuery);

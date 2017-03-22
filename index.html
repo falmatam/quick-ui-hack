@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cirtual Code Challenge</title>
+   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/jput.min.js"></script>
+	<script src="js/loaddata.js">
+		
+	</script>  
+
+	<script >
+		$(document).ready(function(){
+
+			//Search bar function
+			var $cells = $("td");
+
+			$("#search").keyup(function() {
+			    var val = $.trim(this.value).toUpperCase();
+			    if (val === "")
+			        $cells.parent().show();
+			    else {
+			        $cells.parent().hide();
+			        $cells.filter(function() {
+			            return -1 != $(this).text().toUpperCase().indexOf(val); }).parent().show();
+			    }
+			});
+
+
+			//If "Done" option selected, change background to grey & disable row; 
+			//Else, return/remain to white background
+			$(".selectionBox").change(function(){
+				   if($(this).val() == "Done"){
+				   		$(this).closest('tr').css('background-color','#ccc');
+				   		$(this).prop('disabled', true);
+				   }
+				   else if($(this).val() == "Cancelled"){
+				   		//$(this).closest('tr').css('background-color','#fff');
+				   		//Disable Appt.Type, Cell Number, and Email columns; NOT options dropdown, though.
+
+				   }
+				   else{
+				   	$(this).closest('tr').css('background-color','#fff');
+				   }
+				});
+
+		});
+	</script>
+
+  </head>
+  <body>
+ 
+ 	  <label><input id="search" placeholder="Search by Name, Technician, Appointment Type, etc" type="text"></label>	<br><br>
+ 	  <tbody>
+	  	 	<tr>
+		 		<th>Test</th>
+		 		<th>Test</th>
+		 		<th>Test</th>
+		 		<th>Test</th>
+		 		<th>Test</th>
+		 		<th>Test</th>
+		 		<th>Test</th>
+		 	</tr>
+	  	 </tbody>
+	  <table jput="t_template">
+	  	 
+		 <tbody jput="tbody_template">
+		     <tr>
+		     	 <!-- <b style="padding-left:2em;">Name</b> -->
+		         <td id="name">{{name}}</td>
+		         <!-- <b style="padding-left:2em;">Technician</b> -->
+		         <td id="technicianName">{{technicianName}}</td>
+		         <!-- <b style="padding-left:2em;">Order Date</b> -->
+		         <td id="orderDate">{{orderDate}}</td>
+		         <!-- <b style="padding-left:2em;">Appt. Type</b> -->
+		         <td id="apptType">{{apptType}}</td>
+		         <!-- <b style="padding-left:2em;">Cell Number</b> -->
+		         <td id="cellPhone">{{cellPhone}}</td>
+		         <!-- <b style="padding-left:2em;">Email</b> -->
+		         <td id="email">{{email}}</td>
+		         <!-- <b style="padding-left:2em;">Order Status</b> -->
+		         <td>
+		         	<select id="selectionBoxID" class="selectionBox">
+		         		<option >{{orderStatusOne}}</option>
+		         		<option >{{orderStatusTwo}}</option>
+		         		<option >{{orderStatusThree}}</option>
+		         	</select>
+		         </td>
+		     </tr>
+		 </tbody>
+		</table>
+
+		<table>
+		 <tbody id="tbody">
+		 </tbody>
+	  </table>
+
+  </body>
+</html>
+
+
+
