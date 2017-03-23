@@ -23,6 +23,26 @@
       			            return -1 != $(this).text().toUpperCase().indexOf(val); }).parent().show();
       			    }
       			});
+        
+        
+        //If "Done" option selected, change background to grey & disable row; 
+			//Else, return/remain to white background
+			$(".selectionBox").change(function(){
+				   if($(this).val() == "Done"){
+				   		$(this).closest('tr').css('background-color','#ccc');
+				   		$(this).prop('disabled', true);
+				   }
+				   else if($(this).val() == "Cancelled"){
+				   		//$(this).closest('tr').css('background-color','#fff');
+				   		//Disable Appt.Type, Cell Number, and Email columns; NOT options dropdown, though.
+
+				   }
+				   else{
+				   	$(this).closest('tr').css('background-color','#fff');
+				   }
+				});
+
+        
       		});
     </script>
     <style>
@@ -95,8 +115,7 @@
                 </tbody>
               </table>
               <table>
-               <tbody id="tbody">
-               </tbody>
+                <tbody id="tbody"></tbody>
               </table>
             </div>
           </div>
