@@ -1,0 +1,29 @@
+Dear Falmata,
+
+Thank you for your interest in joining Cirtual as an Web Developer. We’re excited to get to know you and learn more about your experience and interests in the field we all love! In order to better assess your coding skills, we’ve made a small project for you to do. This will help us determine your ability to implement a responsive website. You have until March 30, 2017 to complete this project, but feel free to send it to us if you finished earlier. Depending on how you do on this task, we may ask you to work on one more project. Once we have your submissions we will review it and upon approval by the board, we will setup a video call and discuss everything else including projects we would like you to work on and compensation. 
+
+Attached you will find a picture that shows how we envision the website to appear. Please let us know your opinion of the UI and UX of this imaginary site, but we expect you to implement it to look as closely as possible to the image.
+
+The image is showing the main page of the customer list of a cell phone repair shop. The shop has several technicians who can do any job type. Once an order is recorded, it exists in one of the three states: Done, In Progress, or Cancelled. The user of the site can change the state of any order through the state menu on the right.
+
+You can assume that all customer information is already present in the backend and you can generate your own fake data to fill in the table. 
+
+All buttons on the header must link to a separate page but you don’t need to implement any of them other than the home page which is depicted in the attached image. Also please note that:
+
+1- The data must come from somewhere other than the local website (i.e. JSON file, Database, etc.) and you have total freedom as to what technology or technique you use to implement this, and
+
+2- Search only filters the elements of the table that have been loaded and is performed upon every keystroke (i.e. If searching for “Bob”, a search is performed on “B”, then on “Bo” and then on “Bob”)
+
+
+Optional items:
+
+1- Maintain the header in all pages linked in the header
+
+2- Maintain user state across sessions (i.e. changes through the Order State menu persist after refresh or across tabs)
+
+3- Anything you wish to add to improve the functionality while maintaining the current appearance and other features listed above
+
+You may use any technologies and/or open-source project that you deem helpful in developing this website. Please use Github or Bitbucket and send us a link to the repository containing everything needed to run the site, including a README with setup instructions. You can also reach out to us if you had any questions or need for further clarification. We look forward to hear from you soon, and good luck!
+
+
+
