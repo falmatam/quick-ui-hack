@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
+
 			var json = [
+
 		  {
 		    "name": "Fields Sargent",
 		    "technicianName": "Bentley Eaton",
@@ -343,6 +345,10 @@ $(document).ready(function(){
 		  }
 		];
 		//while running this code the template will be appended in your div with json data
+
+
+
+
 		$("#tbody").jPut({
 		    jsonData:json,
 		    //ajax_url:"youfile.json",  if you want to call from a json file
@@ -350,5 +356,9 @@ $(document).ready(function(){
 			});
 
 		
+
+
+		
+
 
 		})(jQuery);
