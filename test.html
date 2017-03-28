@@ -19,7 +19,7 @@
         
               th {
                   height:50px;
-                padding-left:50px;
+                padding-left:40px;
               }
 
 
@@ -67,7 +67,7 @@
         				   		$(this).prop('disabled', true);
         				   }
         				   else if($(this).val() == "Cancelled"){
-
+                      $(this).closest('td').removeAttr('style').css("visibility","visible");
                       $(this).closest('tr').addClass('active');
                       console.log(this.closest('tr').className);
                       $(this).prop('disabled', true);
@@ -112,6 +112,7 @@
             <table >
               <tbody>
                 <tr style="color:#fff">
+                  <th></th>
                   <th>Name</th>
                   <th>Technician</th>
                   <th>Order Date</th>
@@ -128,6 +129,7 @@
               <table jput="t_template">
                 <tbody jput="tbody_template">
                   <tr>
+                    <td style="width:40px;"><img src="instructions\Coding Challenge\Resources\Cancel.png" style="width:30px;visibility: hidden;"/></td>
                     <td>{{name}}</td>
                     <td>{{technicianName}}</td>
                     <td>{{orderDate}}</td>
