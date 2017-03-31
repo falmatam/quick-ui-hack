@@ -34,30 +34,6 @@
             margin-left:-20px;
           }
 
-/*        tr th:nth-child(1){
-            padding-left:50px;
-          }
-
-        tr th:nth-child(2){
-            margin-left:10px;
-          }
-          tr th:nth-child(3){
-            padding-left:20px;
-          }
-          tr th:nth-child(4){
-            padding-left:20px;
-          }
-          tr th:nth-child(5){
-            padding-left:20px;
-          }
-          tr th:nth-child(6){
-            padding-left:20px;
-          }
-          tr th:nth-child(7){
-            padding-left:20px;
-          }
-        */
-
         tr td{
             height:30px;
             padding:20px;
@@ -96,11 +72,6 @@
     <script>
       $(document).ready(function(){
 
-                //$(".imageClass").hide();
-                //$('#imageID').css('visibility','hidden');
-
-              
-              
                 //Search bar function
                 var $cells = $("td");
           
@@ -122,14 +93,11 @@
                       $(this).closest('tr').removeClass('danger');
                       $(this).closest('tr').find('td:first-child').removeClass('imageID1');
 
-                      //$(this).closest('tr').addClass('active');
                       $(this).closest('tr').css('opacity','0.3');
                       $(this).closest('tr').css("background-color","grey");
 
                       $(this).closest('tr').find('td:first-child').css("visibility","visible");
                       
-                      //$(this).prop('disabled', true);
-
                   }
                   else if($(this).val() == "Cancelled"){
 
@@ -138,18 +106,6 @@
                       $(this).closest('tr').addClass('danger');
                       
                       $(this).closest('tr').find('td:first-child').css("visibility","visible");
-
-                      //$(this).closest('tr').children(".imageClass").hide();
-
-
-
-                      //document.getElementById('image').style.visibility='visible';
-
-                      //$(this).closest('td').removeAttr('style').css("visibility","hidden");
-                      //$(this).closest('td').css("visibility","visible");
-
-                      
-                      //$(this).prop('disabled', true);
         
                   }
                   else{
@@ -160,14 +116,6 @@
                       $(this).closest('tr').find('td:first-child').css("visibility","hidden");
                   }
 
-                                       // console.log(this.className);
-                    // var t = $(this).closest('tr');
-                    // console.log(t.className);
-                    //$(this).removeAttr('style').css("background-color","#ccc");
-                    //$(this).closest('tr').css('background-color','#ccc');
-                                          //document.getElementById("image").style.visibility = "visible";
-                      //$('#image').toggle();
-                      //$(this).show();
                 });
 
         
@@ -219,7 +167,7 @@
               <table jput="t_template">
                 <tbody jput="tbody_template">
                   <tr>
-                    <td style="width:40px;" class="imageID1 imageID2"><!-- <img src="instructions\Coding Challenge\Resources\Cancel.png" class="imageClass" style="width:30px;"/> --></td>
+                    <td style="width:40px;" class="imageID1 imageID2"></td>
                     <td align="left">{{name}}</td>
                     <td>{{technicianName}}</td>
                     <td>{{orderDate}}</td>
