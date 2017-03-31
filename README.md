@@ -1,25 +1,41 @@
-CREDITS:
+# Cirtual Interview Assessment
 
-Free dummy-data JSON generator
-http://www.json-generator.com/
+A quick UI hack put together for an interview with Cirtual. Presented an image of desired UI (see Resources folder) and implemented from scratch using HTML, CSS, JS, jQuery and Bootstrap.
 
-jQuery Plugin for generating table elements using JSON data
-https://github.com/shabeer-ali-m/jPut 
+## Getting Started
 
-```
-    {
-  name: '{{firstName()}} {{surname()}}', 
-  technicianName: '{{firstName()}} {{surname()}}', 
-  orderDate: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-dd")}}',    apptType: function (tags) {
-      var aptyps = ['QUOTE', 'INSURANCE', 'REPAIR', 'WARRANTY'];
-      return aptyps[tags.integer(0,Math.random()*aptyps.length)];
-    }, 
-  cellPhone: '{{phone()}}', 
-  email: '{{email()}}', 
-  orderStatusOne:
-    ['In Progress'],
-    orderStatusTwo: ['Cancelled'], 
-        orderStatusThree:['Done']
-     }
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+N/A
+
+
+### Installing
+
+Simply download ZIP of project or clone the repository
 
 ```
+cd proj_directory_on_your_computer
+git init
+git clone https://github.com/falmatam/quick-ui-hack.git
+```
+
+Done.
+
+
+
+##Testing Locally
+
+Simply right click index.html and open in desired browser 
+
+
+## License
+
+This project is licensed under the MIT License
+
+## Acknowledgments
+
+* Free dummy-data JSON generator -- http://www.json-generator.com/
+
+* jQuery Plugin for generating table elements using JSON data -- https://github.com/shabeer-ali-m/jPut 

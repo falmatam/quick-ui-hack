@@ -1,114 +1,250 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Cirtual Code Challenge</title>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="js/jput.min.js"></script>
-	<script src="js/loaddata.js"></script>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- Added -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- / -->
+        <style>
 
-	<script >
-		$(document).ready(function(){
+      html, body {
+          max-width: 100%;
+          overflow-x: hidden;
+}
+
+       table {
+          width: 100%;
+          color:black;
+          
+          /*font-style: bold;*/
+      }
+        
+        th {
+            height:40px;
+            /*padding-left:40px;*/
+
+        }
+
+        tr th:nth-child(3){
+            margin-left:-20px;
+          }
+
+/*        tr th:nth-child(1){
+            padding-left:50px;
+          }
+
+        tr th:nth-child(2){
+            margin-left:10px;
+          }
+          tr th:nth-child(3){
+            padding-left:20px;
+          }
+          tr th:nth-child(4){
+            padding-left:20px;
+          }
+          tr th:nth-child(5){
+            padding-left:20px;
+          }
+          tr th:nth-child(6){
+            padding-left:20px;
+          }
+          tr th:nth-child(7){
+            padding-left:20px;
+          }
+        */
+
+        tr td{
+            height:30px;
+            padding:20px;
+            color:black;
+            font-weight: strong;
+          }
+
+        table tr:nth-child(odd) td{
+            background-color : #f5f4df;
+          }
+
+        .imageID1 {
+            color:black;
+            font-style: bold;
+            width:32px;
+            height:15px;
+            padding-top:10px;
+            background-image: url("instructions/Coding Challenge/Resources/Cancel.png");
+            background-repeat:no-repeat;background-size:contain;padding-top:15px;visibility: hidden;
+    }
+
+        .imageID2 {
+            color:black;
+            font-style: bold;
+            width:32px;
+            height:15px;
+            padding-top:10px;
+            background-image: url("instructions/Coding Challenge/Resources/Check.png");
+            background-repeat:no-repeat;background-size:contain;padding-top:15px;visibility: hidden;
+
+    }
+              
+    </style>
+    <script src="js/jput.min.js"></script>
+    <script src="js/loaddata.js"></script>
+    <script>
+      $(document).ready(function(){
+
+                //$(".imageClass").hide();
+                //$('#imageID').css('visibility','hidden');
+
+              
+              
+                //Search bar function
+                var $cells = $("td");
+          
+                $("#search").keyup(function() {
+                   var val = $.trim(this.value).toUpperCase();
+                   if (val === "")
+                       $cells.parent().show();
+                   else {
+                       $cells.parent().hide();
+                       $cells.filter(function() {
+                           return -1 != $(this).text().toUpperCase().indexOf(val); }).parent().show();
+                   }
+                });
+                
+
+              $(".selectionBox").change(function(){
+
+                  if($(this).val() == "Done"){
+                      $(this).closest('tr').removeClass('danger');
+                      $(this).closest('tr').find('td:first-child').removeClass('imageID1');
+
+                      //$(this).closest('tr').addClass('active');
+                      $(this).closest('tr').css('opacity','0.3');
+                      $(this).closest('tr').css("background-color","grey");
+
+                      $(this).closest('tr').find('td:first-child').css("visibility","visible");
+                      
+                      //$(this).prop('disabled', true);
+
+                  }
+                  else if($(this).val() == "Cancelled"){
+
+                      $(this).closest('tr').removeClass('active');
+                      $(this).closest('tr').find('td:first-child').removeClass('imageID2');
+                      $(this).closest('tr').addClass('danger');
+                      
+                      $(this).closest('tr').find('td:first-child').css("visibility","visible");
+
+                      //$(this).closest('tr').children(".imageClass").hide();
 
 
-			//Search bar function
-			var $cells = $("td");
 
-			$("#search").keyup(function() {
-			    var val = $.trim(this.value).toUpperCase();
-			    if (val === "")
-			        $cells.parent().show();
-			    else {
-			        $cells.parent().hide();
-			        $cells.filter(function() {
-			            return -1 != $(this).text().toUpperCase().indexOf(val); }).parent().show();
-			    }
-			});
+                      //document.getElementById('image').style.visibility='visible';
 
+                      //$(this).closest('td').removeAttr('style').css("visibility","hidden");
+                      //$(this).closest('td').css("visibility","visible");
 
+                      
+                      //$(this).prop('disabled', true);
+        
+                  }
+                  else{
+                      $(this).closest('tr').removeClass('danger');
+                      $(this).closest('tr').removeClass('active');
+                      $(this).closest('tr').removeClass('imageID1');
+                      $(this).closest('tr').removeClass('imageID2');
+                      $(this).closest('tr').find('td:first-child').css("visibility","hidden");
+                  }
 
-			//If "Done" option selected, change background to grey & disable row; 
-			//Else, return/remain to white background
-			$(".selectionBox").change(function(){
-				   if($(this).val() == "Done"){
-				   		$(this).closest('tr').css('background-color','#ccc');
-				   		$(this).prop('disabled', true);
-				   }
-				   else if($(this).val() == "Cancelled"){
-				   		//$(this).closest('tr').css('background-color','#fff');
-				   		//Disable Appt.Type, Cell Number, and Email columns; NOT options dropdown, though.
+                                       // console.log(this.className);
+                    // var t = $(this).closest('tr');
+                    // console.log(t.className);
+                    //$(this).removeAttr('style').css("background-color","#ccc");
+                    //$(this).closest('tr').css('background-color','#ccc');
+                                          //document.getElementById("image").style.visibility = "visible";
+                      //$('#image').toggle();
+                      //$(this).show();
+                });
 
-				   }
-				   else{
-				   	$(this).closest('tr').css('background-color','#fff');
-				   }
-				});
+        
+                
+                  });
+    </script>
 
-		});
-	</script>
+  </head><body>
+    <div class="section">
+      <div class="row">
+        <div class="container" style="width:97.5%;margin-top:-35px;">
+          <div class="row" style="background-color:#e9bb66;padding-top:10px;padding-bottom:10px;">
+            <a href=""><div class="col-sm-1">
+              <img src="instructions\Coding Challenge\Resources\Home.png" class="center-block img-responsive" style="width:40px;margin-right:40px;">
+            </div></a>
+            <a href=""><div class="col-sm-1">
+              <img src="instructions\Coding Challenge\Resources\Inbox.png" class="center-block img-responsive" style="width:40px;margin-left:-40px;">
+            </div></a>
+            <a href=""><div class="col-sm-1">
+              <img src="instructions\Coding Challenge\Resources\Calendar.png" class="center-block img-responsive" style="width:40px;margin-left:-75px;">
+            </div></a>
+            <div class="col-md-8">
+              <label class="col-md-12" style="padding-top:3px;">
+                <input id="search" placeholder="Search by Name, Technician, Appointment Type, etc" type="text" class="form-control" style="border-radius:25px;width:115%;margin-left:-95px;">
+              </label>
+            </div>
+            <a href=""><div class="col-sm-1">
+              <img src="instructions\Coding Challenge\Resources\Profile.png" class="center-block img-responsive" style="width:40px;">
+            </div></a>
+          </div>
+          <div class="row" style="background-color:#452019;border-radius:20px 20px 0px 0px;margin-top:2px;">
+            <table >
+              <tbody>
+                <tr style="color:#fff;">
+                  <!-- <th></th> -->
+                  <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                  <th>&nbsp;&nbsp;Technician</th>
+                  <th>Order Date</th>
+                  <th>Appt. Type</th>
+                  <th>Cell Number</th>
+                  <th>Email</th>
+                  <th>Order Status</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row">
+            <div class="col-md-12" style="width:103%;margin-left:-14px;">
+              <table jput="t_template">
+                <tbody jput="tbody_template">
+                  <tr>
+                    <td style="width:40px;" class="imageID1 imageID2"><!-- <img src="instructions\Coding Challenge\Resources\Cancel.png" class="imageClass" style="width:30px;"/> --></td>
+                    <td align="left">{{name}}</td>
+                    <td>{{technicianName}}</td>
+                    <td>{{orderDate}}</td>
+                    <td>{{apptType}}</td>
+                    <td>{{cellPhone}}</td>
+                    <td>{{email}}</td>
+                    <td>
+                      <select id="selectionBoxID" class="selectionBox">
+                        <option>{{orderStatusOne}}</option>
+                        <option>{{orderStatusTwo}}</option>
+                        <option>{{orderStatusThree}}</option>
+                      </select>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table">
+                <tbody id="tbody"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row"></div>
+        </div>
+      </div>
+    </div>
+  
 
-	<style>
-		th, td {
-		    border: 1px solid;
-		}
-		th {
-		    font-weight : bold
-		}
-	</style>
-
-  </head>
-  <body>
- 
- 	  <label><input id="search" placeholder="Search by Name, Technician, Appointment Type, etc" type="text"></label>	<br><br>
- 	  
-
-	  <table jput="t_template">
-
-		 <tbody jput="tbody_template">
-		     <tr>
-		     	 <!-- <b style="padding-left:2em;">Name</b> -->
-		     	 
-		         <td>{{name}}</td>
-		         <!-- <b style="padding-left:2em;">Technician</b> -->
-		         
-		         <td>{{technicianName}}</td>
-		         <!-- <b style="padding-left:2em;">Order Date</b> -->
-		         
-		         <td>{{orderDate}}</td>
-		         <!-- <b style="padding-left:2em;">Appt. Type</b> -->
-		         
-		         <td>{{apptType}}</td>
-		         <!-- <b style="padding-left:2em;">Cell Number</b> -->
-		         
-		         <td>{{cellPhone}}</td>
-		         <!-- <b style="padding-left:2em;">Email</b> -->
-		         
-		         <td>{{email}}</td>
-		         <!-- <b style="padding-left:2em;">Order Status</b> -->
-		         
-		         <td>
-		         	<select id="selectionBoxID" class="selectionBox">
-		         		<option >{{orderStatusOne}}</option>
-		         		<option >{{orderStatusTwo}}</option>
-		         		<option >{{orderStatusThree}}</option>
-		         	</select>
-		         </td>
-		     </tr>
-		 </tbody>
-		</table>
-
-		<table>
-		 <tbody id="tbody">
-		 </tbody>
-		</table>
-
-
-
-	
-		
-	
-  </body>
-</html>
-
-
-
+</body></html>
