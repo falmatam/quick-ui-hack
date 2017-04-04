@@ -2,7 +2,7 @@
 
 A quick UI hack put together for an interview with Cirtual. Presented an image of desired UI (see instructions/Coding Challenge/Resources folder) and implemented from scratch using HTML, CSS, JS, jQuery and Bootstrap.
 
-View DEMO --> http://cirtualapp.herokuapp.com/
+Development Time: 1.5 hours; will refactor code soon.
 
 ## Getting Started
 
